@@ -35,9 +35,9 @@ jobs:
 
       - name: Push1
         uses: ad-m/github-push-action@master
-          with:
-            github_token: ${{ secrets.GH_PAT }}
-            branch: ${{ github.ref }}
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          branch: ${{ github.ref }}
 
       - name: Push2
         uses: ad-m/github-push-action@master
