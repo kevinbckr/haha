@@ -23,7 +23,9 @@ jobs:
           fetch-depth: 0
 
       - name: Add and commit files
-        run: touch test.txt
+        run: |
+          touch test.txt
+          echo "$(date +"%Y_%m_%d_%I_%S_%M_%p")" > test.txt
 
       - name: Add and commit files
         run: |
@@ -41,7 +43,9 @@ jobs:
 
 
       - name: Add and commit files
-        run: rm test.txt
+        run: |
+          touch test.txt
+          echo "$(date +"%Y_%m_%d_%I_%S_%M_%p")" > test.txt
 
       - name: Add and commit files
         run: |
