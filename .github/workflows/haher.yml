@@ -44,6 +44,7 @@ jobs:
 
       - name: Add and commit files
         run: |
+          sleep 1
           touch test.txt
           echo "$(date +"%Y_%m_%d_%I_%S_%M_%p")" > test.txt
 
