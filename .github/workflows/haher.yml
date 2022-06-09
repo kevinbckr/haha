@@ -10,10 +10,6 @@ on:
     branches:  master 
 
 
-
-
-
-
 jobs:
   rek:
     runs-on: ubuntu-latest
@@ -26,10 +22,10 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-    - name: Add and commit files
-      run: touch test.txt
+      - name: Add and commit files
+        run: touch test.txt
 
-    - name: Add and commit files
+      - name: Add and commit files
         run: |
           git add .
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -37,14 +33,14 @@ jobs:
           git commit -m "Add Docs [skip ci]" -a
 
 
-    - name: Push1
-      uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          branch: ${{ github.ref }}
+      - name: Push1
+        uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.GH_PAT }}
+            branch: ${{ github.ref }}
 
-    - name: Push2
-      uses: ad-m/github-push-action@master
+      - name: Push2
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GH_PAT }}
           branch: ${{ github.ref }}      
