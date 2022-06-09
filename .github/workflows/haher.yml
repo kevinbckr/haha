@@ -39,6 +39,17 @@ jobs:
           github_token: ${{ secrets.GH_PAT }}
           branch: ${{ github.ref }}
 
+
+      - name: Add and commit files
+        run: touch test.txt
+
+      - name: Add and commit files
+        run: |
+          git add .
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Add Docs" -a    
+
       - name: Push2
         uses: ad-m/github-push-action@master
         with:
