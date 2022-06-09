@@ -2,10 +2,13 @@ name: haher
 
 on:
   push:
-    branches:  master 
+    branches:
+      - master
+      - main
   pull_request:
-    branches:  master 
-
+    branches:
+      - master
+      - main
 
 jobs:
   rek:
@@ -36,8 +39,8 @@ jobs:
           github_token: ${{ secrets.GH_PAT }}
           branch: ${{ github.ref }}
 
-      #- name: Push2
-      #  uses: ad-m/github-push-action@master
-       # with:
-      #    github_token: ${{ secrets.GH_PAT }}
-       #   branch: ${{ github.ref }}      
+      - name: Push2
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          branch: ${{ github.ref }}      
