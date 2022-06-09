@@ -41,7 +41,7 @@ jobs:
 
 
       - name: Add and commit files
-        run: touch test.txt
+        run: rm test.txt
 
       - name: Add and commit files
         run: |
