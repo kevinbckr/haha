@@ -1,8 +1,5 @@
 name: haher
 
-
-
-
 on:
   push:
     branches:  master 
